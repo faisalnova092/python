@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var city = prompt("Enter city name:");
+        if (city.toLowerCase() === "karachi") {
+            alert("Welcome to the city of lights!");
+        } else {
+            alert("Welcome to " + city + "!");
+        }
+    </script>
+
+    <script>
+        var gender = prompt("Enter your gender (male/female):");
+        if (gender.toLowerCase() === "male") {
+            alert("Welcome, Mr. " + gender + "!");
+        } else if (gender.toLowerCase() === "female") {
+            alert("Welcome, Ms. " + gender + "!");
+        } else {
+            alert("Invalid gender entered.");
+        }
+    </script>
+
+    <script>
+        var trafficSignal = prompt("Enter traffic signal color (red/yellow/green):");
+        if (trafficSignal.toLowerCase() === "red") {
+            alert("Must Stop");
+        } else if (trafficSignal.toLowerCase() === "yellow") {
+            alert("Ready to move");
+        } else if (trafficSignal.toLowerCase() === "green") {
+            alert("Move now");
+        } else {
+            alert("Invalid traffic signal color entered.");
+        }
+    </script>
+
+    <script>
+        var fuel = parseFloat(prompt("Enter remaining fuel in liters:"));
+        if (fuel < 0.25) {
+            alert("Please refill the fuel in your car");
+        } else {
+            alert("You have enough fuel.");
+        }
+    </script>
+
+    <script>
+        var a = 4;
+        if (++a === 5) {
+            alert("Given condition for variable a is true");
+        }
+
+        var b = 82;
+        if (b++ === 83) {
+            alert("Given condition for variable b is true");
+        }
+
+        var c = 12;
+        if (c++ === 13) {
+            alert("Condition 1 is true");
+        }
+        if (c === 13) {
+            alert("Condition 2 is true");
+        }
+        if (++c < 14) {
+            alert("Condition 3 is true");
+        }
+        if (c === 14) {
+            alert("Condition 4 is true");
+        }
+
+        var materialCost = 20000;
+        var laborCost = 2000;
+        var totalCost = materialCost + laborCost;
+        if (totalCost === laborCost + materialCost) {
+            alert("The cost equals");
+        }
+
+        if (true) {
+            alert("True");
+        }
+        if (false) {
+            alert("False");
+        }
+
+        if ("car" < "cat") {
+            alert("car is smaller than cat");
+        }
+    </script>
+
+    <script>
+        var marks1 = parseInt(prompt("Enter marks obtained in subject 1:"));
+        var marks2 = parseInt(prompt("Enter marks obtained in subject 2:"));
+        var marks3 = parseInt(prompt("Enter marks obtained in subject 3:"));
+        var totalMarks = 300;
+
+        var totalObtainedMarks = marks1 + marks2 + marks3;
+        var percentage = (totalObtainedMarks / totalMarks) * 100;
+
+        document.write("<h1>Marks Sheet</h1>");
+        document.write("Total Marks: " + totalMarks + "<br>");
+        document.write("Marks Obtained: " + totalObtainedMarks + "<br>");
+        document.write("Percentage: " + percentage.toFixed(2) + "%<br>");
+
+        if (percentage >= 80) {
+            document.write("Grade: A-one<br>");
+            document.write("Remarks: Excellent");
+        } else if (percentage >= 70) {
+            document.write("Grade: A<br>");
+            document.write("Remarks: Good");
+        } else if (percentage >= 60) {
+            document.write("Grade: B<br>");
+            document.write("Remarks: You need to improve");
+        } else {
+            document.write("Grade: Fail<br>");
+            document.write("Remarks: Sorry");
+        }
+    </script>
+
+    <script>
+        var secretNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+        var userGuess = parseInt(prompt("Guess the secret number (between 1 and 10):"));
+
+        if (userGuess === secretNumber) {
+            alert("Bingo! Correct answer.");
+        } else if (userGuess === secretNumber + 1 || userGuess === secretNumber - 1) {
+            alert("Close enough to the correct answer.");
+        } else {
+            alert("Sorry, the correct number was " + secretNumber);
+        }
+    </script>
+
+    <script>
+        var number = parseInt(prompt("Enter a number to check if it's divisible by 3:"));
+        if (number % 3 === 0) {
+            alert(number + " is divisible by 3.");
+        } else {
+            alert(number + " is not divisible by 3.");
+        }
+    </script>
+
+    <script>
+        var number = parseInt(prompt("Enter a number to check if it's even or odd:"));
+        if (number % 2 === 0) {
+            alert(number + " is an even number.");
+        } else {
+            alert(number + " is an odd number.");
+        }
+    </script>
+
+    <script>
+        var temperature = parseFloat(prompt("Enter the temperature:"));
+        if (temperature > 40) {
+            alert("It is too hot outside.");
+        } else if (temperature > 30) {
+            alert("The Weather today is Normal.");
+        } else if (temperature > 20) {
+            alert("Today's Weather is cool.");
+        } else if (temperature > 10) {
+            alert("OMG! Today's weather is so Cool.");
+        } else {
+            alert("It's freezing cold!");
+        }
+    </script>
+
+    <script>
+        var firstNumber = parseFloat(prompt("Enter the first number:"));
+        var secondNumber = parseFloat(prompt("Enter the second number:"));
+        var operation = prompt("Enter the operation (+, -, *, /, %):");
+
+        var result;
+        if (operation === "+") {
+            result = firstNumber + secondNumber;
+        } else if (operation === "-") {
+            result = firstNumber - secondNumber;
+        } else if (operation === "*") {
+            result = firstNumber * secondNumber;
+        } else if (operation === "/") {
+            result = firstNumber / secondNumber;
+        } else if (operation === "%") {
+            result = firstNumber % secondNumber;
+        } else {
+            alert("Invalid operation entered.");
+        }
+
+        if (result !== undefined) {
+            alert("The result of " + firstNumber + " " + operation + " " + secondNumber + " is: " + result);
+        }
+    </script>
+</body>
+</html>
