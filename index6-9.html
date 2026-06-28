@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        document.write("Result:<br>The value of a is: " + a);
+        document.write("<br>..............................................<br><br>");
+        document.write("The value of ++a is: " + (++a));
+        document.write("<br>Now the value of a is: " + a);
+        document.write("<br><br>The value of a++ is: " + (a++));
+        document.write("<br>Now the value of a is: " + a);
+        document.write("<br><br>The value of --a is: " + (--a));
+        document.write("<br>Now the value of a is: " + a);
+        document.write("<br><br>The value of a-- is: " + (a--));
+        document.write("<br>Now the value of a is: " + a);
+    </script>
+
+    <script>
+        var a = 2, b = 1;
+        var result = --a - --b + ++b + b--;
+        document.write("<br><br>a is: " + a);
+        document.write("<br>b is: " + b);
+        document.write("<br>result is: " + result);
+    </script>
+
+    <script>
+        var userName = prompt("Enter your name:");
+        alert("Hello, " + userName + "! Welcome to our website.");
+    </script>
+
+    <script>
+        var num = prompt("Enter a number for multiplication table:", 5);
+        document.write("Table of " + num + ":<br>");
+        for (var i = 1; i <= 10; i++) {
+            document.write(num + " x " + i + " = " + (num * i) + "<br>");
+        }
+    </script>
+
+    <script>
+        var subject1 = prompt("Enter the name of subject 1:");
+        var subject2 = prompt("Enter the name of subject 2:");
+        var subject3 = prompt("Enter the name of subject 3:");
+
+        var totalMarks = 100;
+        var marks1 = parseInt(prompt("Enter obtained marks for " + subject1 + ":"));
+        var marks2 = parseInt(prompt("Enter obtained marks for " + subject2 + ":"));
+        var marks3 = parseInt(prompt("Enter obtained marks for " + subject3 + ":"));
+
+        var totalObtainedMarks = marks1 + marks2 + marks3;
+        var percentage1 = (marks1 / totalMarks) * 100;
+        var percentage2 = (marks2 / totalMarks) * 100;
+        var percentage3 = (marks3 / totalMarks) * 100;
+        var overallPercentage = (totalObtainedMarks / (totalMarks * 3)) * 100;
+
+        
+        document.write("<br><br><h2>Marks Sheet</h2>");
+        document.write("<table border='1'>");
+        document.write("<tr><td>" + subject1 + "</td><td>" + totalMarks + "</td><td>" + marks1 + "</td><td>" + percentage1.toFixed(2) + "%</td></tr>");
+        document.write("<tr><td>" + subject2 + "</td><td>" + totalMarks + "</td><td>" + marks2 + "</td><td>" + percentage2.toFixed(2) + "%</td></tr>");
+        document.write("<tr><td>" + subject3 + "</td><td>" + totalMarks + "</td><td>" + marks3 + "</td><td>" + percentage3.toFixed(2) + "%</td></tr>");
+        document.write("<tr><td>" + "Total" + "</td><td>" + (totalMarks * 3) + "</td><td>" + totalObtainedMarks + "</td><td>" + overallPercentage.toFixed(2) + "%</td></tr>");
+        document.write("</table>");
+    </script>
+</body>
+</html>
